@@ -81,3 +81,8 @@ button:active {
   margin: auto;
   max-width: 90%;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+}

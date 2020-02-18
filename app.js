@@ -12,7 +12,7 @@ app.set("views", "views");
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
-app.use(bodyParser.urlencoded({ extended: true })); // bodty parsing for form response
+app.use(bodyParser.urlencoded({ extended: true })); // body parsing for form response
 
 // app.use((req, res, next) => {
 //   console.log("In the middleware");
