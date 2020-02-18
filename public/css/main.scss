@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -84,5 +88,12 @@ button:active {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(autofill, minmax(250px, 1fr));
+  // grid-auto-rows: repeat(autofill, minmax(1fr, 250px));ss
+  // grid-template-rows: repeat(autofill, minmax(1fr, 250px));
+  grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+}
+
+.card {
+  max-width: 250px;
+  border: 1px solid red;
 }
