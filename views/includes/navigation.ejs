@@ -1,12 +1,16 @@
 <header class="main-header">
-    <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-            <li class="main-header__items">
-                <a class="<%= Active==='shop'?'active':'' %>" href="/">Shop</a>
-            </li>
-            <li class="main-header__items">
-                <a class="<%= Active==='product'?'active':'' %>" href="/admin/add-product">Add Product</a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <li class="main-header__item">
+        <a class="<%= isActive==='shop' ? 'active':'' %> " href="/">Shop</a>
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= isActive==='admin' ? 'active':'' %> "
+          href="/admin/add-product"
+          >Add Product</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>
