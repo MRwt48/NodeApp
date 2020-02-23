@@ -11,6 +11,7 @@ app.set("views", "views");
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
+const errorControl = require("./controllers/error");
 
 app.use(bodyParser.urlencoded({ extended: true })); // body parsing for form response
 
@@ -28,12 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
-app.use("/", (req, res, next) => {
-  // res.status(404).sendFile(path.join(__dirname, "views", "error.html"));//not used with templates
-  res
-    .status(404)
-    .render("error", { pageTitle: "Page Not Found", isActive: "" });
-});
+app.use("/", errorControl.get404);
 
 // const server = http.createServer(app);
 // server.listen(1000);
