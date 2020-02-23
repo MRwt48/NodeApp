@@ -1,4 +1,4 @@
-const products = [];
+const Product = require("../models/product");
 
 exports.getAddProduct = (req, res, next) => {
   // res.send(
@@ -9,13 +9,20 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
-  products.push({ title: req.body.title });
+  const product = new Product(req.body.title);
+  product.save(); //calling the save method
   res.redirect("/");
 };
 
 exports.getProducts = (req, res, next) => {
+  Product.fetchAll(products => {
+    res.render("shop", {
+      prods: products,
+      pageTitle: "Shop",
+      isActive: "shop"
+    });
+  }); // calling the static method
   // res.send("<h1>Hello</h1>"); //if not next then call res
   // res.sendFile(path.join(__dirname, "views", "shop.html")); //
   // res.sendFile(path.join(__dirname, "..", "views", "shop.html")); // the oter method using __dirname
-  res.render("shop", { prods: products, pageTitle: "Shop", isActive: "shop" });
 };
