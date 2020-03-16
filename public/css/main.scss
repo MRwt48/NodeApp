@@ -48,14 +48,16 @@ main {
 }
 
 .form-control label,
-.form-control input {
+.form-control input,
+.form-control textarea {
   display: block;
   width: 100%;
 }
 
-.form-control input {
+.form-control input,
+.form-control textarea {
   border: 1px solid #00a6e7;
-  height: 30px;
+  min-height: 30px;
   padding: 5px;
   font: inherit;
   border-radius: 3px;
@@ -89,6 +91,13 @@ button:active {
 }
 
 .card {
-  width: 250px;
+  width: 230px;
   text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(#333, 0.2);
+  border-radius: 3px;
+  padding: 10px;
 }
