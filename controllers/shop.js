@@ -26,7 +26,14 @@ exports.getProducts = (req, res, next) => {
 exports.getCart = (req, res, next) => {
   res.render("shop/cart", {
     isActive: "cart",
-    pageTitle: "Your cart"
+    pageTitle: "Your Cart"
+  });
+};
+
+exports.getOrders = (req, res, next) => {
+  res.render("shop/orders", {
+    isActive: "orders",
+    pageTitle: "Your Orders"
   });
 };
 
