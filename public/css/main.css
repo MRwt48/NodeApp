@@ -241,4 +241,8 @@ main {
     display: none;
   }
 }
+
+.centered {
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
